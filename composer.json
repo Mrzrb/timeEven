@@ -12,5 +12,11 @@
             "email": "zhangruobin001@ke.com"
         }
     ],
+
+	"autoload": {
+		"psr-4": {
+			"RobinSchedule\\": "src/"
+		}
+	},
     "minimum-stability": "stable"
 }
