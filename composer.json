@@ -1,0 +1,16 @@
+{
+    "name": "zhangrb/time-even",
+    "description": "a package that help in event and delayed event with redis, and a tool with cron schedule.",
+    "require": {
+        "peppeocchi/php-cron-scheduler": "v2.4.*",
+        "chrisboulton/php-resque-scheduler": "1.1"
+    },
+    "license": "mit",
+    "authors": [
+        {
+            "name": "张若彬(23117098)",
+            "email": "zhangruobin001@ke.com"
+        }
+    ],
+    "minimum-stability": "stable"
+}
