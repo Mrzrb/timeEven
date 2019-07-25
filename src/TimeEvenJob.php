@@ -16,7 +16,7 @@ class TimeEvenJob implements JobContract
     protected $type = self::ASYNC;
     protected $delay = 10;
 
-    protected $queueName = 'test-job';
+    protected $queueName = 'queued-job';
 
     public $args = [];
 
@@ -47,7 +47,7 @@ class TimeEvenJob implements JobContract
 
 	public function perform()
 	{
-		var_dump($this->args);
+        throw new TimeEvenException("please implement perform method");
 	}
 
 	/**
