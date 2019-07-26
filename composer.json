@@ -6,7 +6,7 @@
         "chrisboulton/php-resque-scheduler": "1.1"
     },
     "license": "mit",
-    "version":"1.0",
+    "version":"1.10",
     "authors": [
         {
             "name": "张若彬(23117098)",
