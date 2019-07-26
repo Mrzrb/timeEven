@@ -14,7 +14,8 @@ class TimeEvenJob implements JobContract
      *默认同步
      */
     protected $type = self::ASYNC;
-    protected $delay = 10;
+    protected $delay = -300;
+    protected $at = '2001-01-01 12:00:00';
 
     protected $queueName = 'queued-job';
 
@@ -33,7 +34,9 @@ class TimeEvenJob implements JobContract
         if($this->type == self::SYNC){
             $instance->enqueueJob($this->queueName, $this, $this->args, $this->track);
         }else if($this->type == self::ASYNC && $this->delay){
-            $instance->enqueueJobAt(time() + 10, $this->queueName, $this, $this->args);
+            $instance->enqueueJobIn($this->delay, $this->queueName, $this, $this->args);
+        }else if($this->type == self::ASYNC && $this->at){
+            $instance->enqueueJobAt($this->at, $this->queueName, $this, $this->args);
         }
 
     }
